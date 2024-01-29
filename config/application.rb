@@ -14,7 +14,7 @@ module Occams
     config.load_defaults Rails.version.scan(%r{^\d+\.\d+}).first.to_f
 
     # Rails 7.1 compatibility - See config/initializers/new_framework_defaults_7_1.rb
-    config.add_autoload_paths_to_load_path = true
+    config.add_autoload_paths_to_load_path = false
 
     if Gem::Version.new(Rails.version) >= Gem::Version.new('7.1.0')
       config.active_record.default_column_serializer = YAML
